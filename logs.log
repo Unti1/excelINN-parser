@@ -1,0 +1,416 @@
+02:51:47 - _client
+[INFO] _send_single_request:
+ 1013 - HTTP Request: POST https://suggestions.dadata.ru/suggestions/api/4_1/rs/findById/party "HTTP/1.1 200 OK"
+03:26:40 - logger
+[INFO] log:
+ 11 - ====== WebDriver manager ======
+03:26:40 - logger
+[INFO] log:
+ 11 - Driver [/home/unti1/.wdm/drivers/chromedriver/linux64/114.0.5735.90/chromedriver] found in cache
+03:26:52 - parser
+[ERROR] test:
+ 69 - Traceback (most recent call last):
+  File "/home/unti1/MyWork/Orders/excelINN-parser/tools/parser.py", line 67, in test
+    self.get_birank_comp_link('6904008332')
+  File "/home/unti1/MyWork/Orders/excelINN-parser/tools/parser.py", line 49, in get_birank_comp_link
+    self.driver.find_element(By.XPATH,'//article[@class="articleSearch"]').click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/unti1/MyWork/Orders/excelINN-parser/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 740, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/unti1/MyWork/Orders/excelINN-parser/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 346, in execute
+    self.error_handler.check_response(response)
+  File "/home/unti1/MyWork/Orders/excelINN-parser/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//article[@class="articleSearch"]"}
+  (Session info: chrome=114.0.5735.198); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55dd975fa4e3 <unknown>
+#1 0x55dd97329c76 <unknown>
+#2 0x55dd97365c96 <unknown>
+#3 0x55dd97365dc1 <unknown>
+#4 0x55dd9739f7f4 <unknown>
+#5 0x55dd9738503d <unknown>
+#6 0x55dd9739d30e <unknown>
+#7 0x55dd97384de3 <unknown>
+#8 0x55dd9735a2dd <unknown>
+#9 0x55dd9735b34e <unknown>
+#10 0x55dd975ba3e4 <unknown>
+#11 0x55dd975be3d7 <unknown>
+#12 0x55dd975c8b20 <unknown>
+#13 0x55dd975bf023 <unknown>
+#14 0x55dd9758d1aa <unknown>
+#15 0x55dd975e36b8 <unknown>
+#16 0x55dd975e3847 <unknown>
+#17 0x55dd975f3243 <unknown>
+#18 0x7f5ac9694b43 <unknown>
+
+
+03:36:23 - logger
+[INFO] log:
+ 11 - ====== WebDriver manager ======
+03:36:23 - logger
+[INFO] log:
+ 11 - Driver [/home/unti1/.wdm/drivers/chromedriver/linux64/114.0.5735.90/chromedriver] found in cache
+03:36:30 - parser
+[ERROR] test:
+ 78 - Traceback (most recent call last):
+  File "/home/unti1/MyWork/Orders/excelINN-parser/tools/parser.py", line 76, in test
+    self.get_birank_comp_link('6904008332')
+  File "/home/unti1/MyWork/Orders/excelINN-parser/tools/parser.py", line 58, in get_birank_comp_link
+    self.driver.find_element(By.XPATH,'//article[@class="articleSearch"]').click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/unti1/MyWork/Orders/excelINN-parser/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 740, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/unti1/MyWork/Orders/excelINN-parser/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 346, in execute
+    self.error_handler.check_response(response)
+  File "/home/unti1/MyWork/Orders/excelINN-parser/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//article[@class="articleSearch"]"}
+  (Session info: chrome=114.0.5735.198); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5557f44704e3 <unknown>
+#1 0x5557f419fc76 <unknown>
+#2 0x5557f41dbc96 <unknown>
+#3 0x5557f41dbdc1 <unknown>
+#4 0x5557f42157f4 <unknown>
+#5 0x5557f41fb03d <unknown>
+#6 0x5557f421330e <unknown>
+#7 0x5557f41fade3 <unknown>
+#8 0x5557f41d02dd <unknown>
+#9 0x5557f41d134e <unknown>
+#10 0x5557f44303e4 <unknown>
+#11 0x5557f44343d7 <unknown>
+#12 0x5557f443eb20 <unknown>
+#13 0x5557f4435023 <unknown>
+#14 0x5557f44031aa <unknown>
+#15 0x5557f44596b8 <unknown>
+#16 0x5557f4459847 <unknown>
+#17 0x5557f4469243 <unknown>
+#18 0x7efd5aa94b43 <unknown>
+
+
+03:37:06 - logger
+[INFO] log:
+ 11 - ====== WebDriver manager ======
+03:37:06 - logger
+[INFO] log:
+ 11 - Driver [/home/unti1/.wdm/drivers/chromedriver/linux64/114.0.5735.90/chromedriver] found in cache
+03:37:15 - parser
+[ERROR] test:
+ 79 - Traceback (most recent call last):
+  File "/home/unti1/MyWork/Orders/excelINN-parser/tools/parser.py", line 77, in test
+    self.get_birank_comp_link('6904008332')
+  File "/home/unti1/MyWork/Orders/excelINN-parser/tools/parser.py", line 59, in get_birank_comp_link
+    self.driver.find_element(By.XPATH,'//article[@class="articleSearch"]').click()
+  File "/home/unti1/MyWork/Orders/excelINN-parser/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/home/unti1/MyWork/Orders/excelINN-parser/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/unti1/MyWork/Orders/excelINN-parser/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 346, in execute
+    self.error_handler.check_response(response)
+  File "/home/unti1/MyWork/Orders/excelINN-parser/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <article class="articleSearch">...</article> is not clickable at point (828, 260). Other element would receive the click: <input type="text" name="user[name]" placeholder="Имя*" required="">
+  (Session info: chrome=114.0.5735.198)
+Stacktrace:
+#0 0x56396ff6a4e3 <unknown>
+#1 0x56396fc99c76 <unknown>
+#2 0x56396fcdb9d4 <unknown>
+#3 0x56396fcd9cbd <unknown>
+#4 0x56396fcd7d2e <unknown>
+#5 0x56396fcd710f <unknown>
+#6 0x56396fccc1da <unknown>
+#7 0x56396fcf5012 <unknown>
+#8 0x56396fccbb03 <unknown>
+#9 0x56396fcf51de <unknown>
+#10 0x56396fd0d30e <unknown>
+#11 0x56396fcf4de3 <unknown>
+#12 0x56396fcca2dd <unknown>
+#13 0x56396fccb34e <unknown>
+#14 0x56396ff2a3e4 <unknown>
+#15 0x56396ff2e3d7 <unknown>
+#16 0x56396ff38b20 <unknown>
+#17 0x56396ff2f023 <unknown>
+#18 0x56396fefd1aa <unknown>
+#19 0x56396ff536b8 <unknown>
+#20 0x56396ff53847 <unknown>
+#21 0x56396ff63243 <unknown>
+#22 0x7f1039e94b43 <unknown>
+
+
+03:39:07 - logger
+[INFO] log:
+ 11 - ====== WebDriver manager ======
+03:39:07 - logger
+[INFO] log:
+ 11 - Driver [/home/unti1/.wdm/drivers/chromedriver/linux64/114.0.5735.90/chromedriver] found in cache
+03:39:18 - parser
+[ERROR] test:
+ 79 - Traceback (most recent call last):
+  File "/home/unti1/MyWork/Orders/excelINN-parser/tools/parser.py", line 77, in test
+    self.get_birank_comp_link('6904008332')
+  File "/home/unti1/MyWork/Orders/excelINN-parser/tools/parser.py", line 59, in get_birank_comp_link
+    self.driver.find_element(By.XPATH,'//article[@class="articleSearch"]').click()
+  File "/home/unti1/MyWork/Orders/excelINN-parser/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/home/unti1/MyWork/Orders/excelINN-parser/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/unti1/MyWork/Orders/excelINN-parser/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 346, in execute
+    self.error_handler.check_response(response)
+  File "/home/unti1/MyWork/Orders/excelINN-parser/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <article class="articleSearch">...</article> is not clickable at point (828, 260). Other element would receive the click: <input type="text" name="user[name]" placeholder="Имя*" required="">
+  (Session info: chrome=114.0.5735.198)
+Stacktrace:
+#0 0x56452b37b4e3 <unknown>
+#1 0x56452b0aac76 <unknown>
+#2 0x56452b0ec9d4 <unknown>
+#3 0x56452b0eacbd <unknown>
+#4 0x56452b0e8d2e <unknown>
+#5 0x56452b0e810f <unknown>
+#6 0x56452b0dd1da <unknown>
+#7 0x56452b106012 <unknown>
+#8 0x56452b0dcb03 <unknown>
+#9 0x56452b1061de <unknown>
+#10 0x56452b11e30e <unknown>
+#11 0x56452b105de3 <unknown>
+#12 0x56452b0db2dd <unknown>
+#13 0x56452b0dc34e <unknown>
+#14 0x56452b33b3e4 <unknown>
+#15 0x56452b33f3d7 <unknown>
+#16 0x56452b349b20 <unknown>
+#17 0x56452b340023 <unknown>
+#18 0x56452b30e1aa <unknown>
+#19 0x56452b3646b8 <unknown>
+#20 0x56452b364847 <unknown>
+#21 0x56452b374243 <unknown>
+#22 0x7f6b87c94b43 <unknown>
+
+
+03:40:06 - logger
+[INFO] log:
+ 11 - ====== WebDriver manager ======
+03:40:06 - logger
+[INFO] log:
+ 11 - Driver [/home/unti1/.wdm/drivers/chromedriver/linux64/114.0.5735.90/chromedriver] found in cache
+03:40:15 - parser
+[ERROR] test:
+ 79 - Traceback (most recent call last):
+  File "/home/unti1/MyWork/Orders/excelINN-parser/tools/parser.py", line 77, in test
+    self.get_birank_comp_link('6904008332')
+  File "/home/unti1/MyWork/Orders/excelINN-parser/tools/parser.py", line 59, in get_birank_comp_link
+    self.driver.find_element(By.XPATH,'//article[@class="articleSearch"]').click()
+  File "/home/unti1/MyWork/Orders/excelINN-parser/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/home/unti1/MyWork/Orders/excelINN-parser/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/unti1/MyWork/Orders/excelINN-parser/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 346, in execute
+    self.error_handler.check_response(response)
+  File "/home/unti1/MyWork/Orders/excelINN-parser/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <article class="articleSearch">...</article> is not clickable at point (828, 260). Other element would receive the click: <input type="text" name="user[name]" placeholder="Имя*" required="">
+  (Session info: chrome=114.0.5735.198)
+Stacktrace:
+#0 0x55cebe3244e3 <unknown>
+#1 0x55cebe053c76 <unknown>
+#2 0x55cebe0959d4 <unknown>
+#3 0x55cebe093cbd <unknown>
+#4 0x55cebe091d2e <unknown>
+#5 0x55cebe09110f <unknown>
+#6 0x55cebe0861da <unknown>
+#7 0x55cebe0af012 <unknown>
+#8 0x55cebe085b03 <unknown>
+#9 0x55cebe0af1de <unknown>
+#10 0x55cebe0c730e <unknown>
+#11 0x55cebe0aede3 <unknown>
+#12 0x55cebe0842dd <unknown>
+#13 0x55cebe08534e <unknown>
+#14 0x55cebe2e43e4 <unknown>
+#15 0x55cebe2e83d7 <unknown>
+#16 0x55cebe2f2b20 <unknown>
+#17 0x55cebe2e9023 <unknown>
+#18 0x55cebe2b71aa <unknown>
+#19 0x55cebe30d6b8 <unknown>
+#20 0x55cebe30d847 <unknown>
+#21 0x55cebe31d243 <unknown>
+#22 0x7f0856694b43 <unknown>
+
+
+03:40:44 - logger
+[INFO] log:
+ 11 - ====== WebDriver manager ======
+03:40:44 - logger
+[INFO] log:
+ 11 - Driver [/home/unti1/.wdm/drivers/chromedriver/linux64/114.0.5735.90/chromedriver] found in cache
+03:40:54 - parser
+[ERROR] test:
+ 79 - Traceback (most recent call last):
+  File "/home/unti1/MyWork/Orders/excelINN-parser/tools/parser.py", line 77, in test
+    self.get_birank_comp_link('6904008332')
+  File "/home/unti1/MyWork/Orders/excelINN-parser/tools/parser.py", line 59, in get_birank_comp_link
+    self.driver.find_element(By.XPATH,'//article[@class="articleSearch"]').click()
+  File "/home/unti1/MyWork/Orders/excelINN-parser/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/home/unti1/MyWork/Orders/excelINN-parser/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/unti1/MyWork/Orders/excelINN-parser/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 346, in execute
+    self.error_handler.check_response(response)
+  File "/home/unti1/MyWork/Orders/excelINN-parser/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <article class="articleSearch">...</article> is not clickable at point (828, 260). Other element would receive the click: <input type="text" name="user[name]" placeholder="Имя*" required="">
+  (Session info: chrome=114.0.5735.198)
+Stacktrace:
+#0 0x55bc59f7a4e3 <unknown>
+#1 0x55bc59ca9c76 <unknown>
+#2 0x55bc59ceb9d4 <unknown>
+#3 0x55bc59ce9cbd <unknown>
+#4 0x55bc59ce7d2e <unknown>
+#5 0x55bc59ce710f <unknown>
+#6 0x55bc59cdc1da <unknown>
+#7 0x55bc59d05012 <unknown>
+#8 0x55bc59cdbb03 <unknown>
+#9 0x55bc59d051de <unknown>
+#10 0x55bc59d1d30e <unknown>
+#11 0x55bc59d04de3 <unknown>
+#12 0x55bc59cda2dd <unknown>
+#13 0x55bc59cdb34e <unknown>
+#14 0x55bc59f3a3e4 <unknown>
+#15 0x55bc59f3e3d7 <unknown>
+#16 0x55bc59f48b20 <unknown>
+#17 0x55bc59f3f023 <unknown>
+#18 0x55bc59f0d1aa <unknown>
+#19 0x55bc59f636b8 <unknown>
+#20 0x55bc59f63847 <unknown>
+#21 0x55bc59f73243 <unknown>
+#22 0x7f39e8c94b43 <unknown>
+
+
+03:41:07 - logger
+[INFO] log:
+ 11 - ====== WebDriver manager ======
+03:41:07 - logger
+[INFO] log:
+ 11 - Driver [/home/unti1/.wdm/drivers/chromedriver/linux64/114.0.5735.90/chromedriver] found in cache
+03:41:45 - logger
+[INFO] log:
+ 11 - ====== WebDriver manager ======
+03:41:45 - logger
+[INFO] log:
+ 11 - Driver [/home/unti1/.wdm/drivers/chromedriver/linux64/114.0.5735.90/chromedriver] found in cache
+03:41:55 - parser
+[ERROR] test:
+ 79 - Traceback (most recent call last):
+  File "/home/unti1/MyWork/Orders/excelINN-parser/tools/parser.py", line 77, in test
+    print(self.get_birank_comp_link('6904008332'))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/unti1/MyWork/Orders/excelINN-parser/tools/parser.py", line 59, in get_birank_comp_link
+    self.driver.find_element(By.XPATH,'//article[@class="articleSearch"]').click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/unti1/MyWork/Orders/excelINN-parser/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 740, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/unti1/MyWork/Orders/excelINN-parser/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 346, in execute
+    self.error_handler.check_response(response)
+  File "/home/unti1/MyWork/Orders/excelINN-parser/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//article[@class="articleSearch"]"}
+  (Session info: chrome=114.0.5735.198); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55a4e07734e3 <unknown>
+#1 0x55a4e04a2c76 <unknown>
+#2 0x55a4e04dec96 <unknown>
+#3 0x55a4e04dedc1 <unknown>
+#4 0x55a4e05187f4 <unknown>
+#5 0x55a4e04fe03d <unknown>
+#6 0x55a4e051630e <unknown>
+#7 0x55a4e04fdde3 <unknown>
+#8 0x55a4e04d32dd <unknown>
+#9 0x55a4e04d434e <unknown>
+#10 0x55a4e07333e4 <unknown>
+#11 0x55a4e07373d7 <unknown>
+#12 0x55a4e0741b20 <unknown>
+#13 0x55a4e0738023 <unknown>
+#14 0x55a4e07061aa <unknown>
+#15 0x55a4e075c6b8 <unknown>
+#16 0x55a4e075c847 <unknown>
+#17 0x55a4e076c243 <unknown>
+#18 0x7fed67094b43 <unknown>
+
+
+03:44:16 - logger
+[INFO] log:
+ 11 - ====== WebDriver manager ======
+03:44:16 - logger
+[INFO] log:
+ 11 - Driver [/home/unti1/.wdm/drivers/chromedriver/linux64/114.0.5735.90/chromedriver] found in cache
+03:44:50 - logger
+[INFO] log:
+ 11 - ====== WebDriver manager ======
+03:44:50 - logger
+[INFO] log:
+ 11 - Driver [/home/unti1/.wdm/drivers/chromedriver/linux64/114.0.5735.90/chromedriver] found in cache
+03:49:09 - parser
+[ERROR] test:
+ 81 - Traceback (most recent call last):
+  File "/home/unti1/MyWork/Orders/excelINN-parser/tools/parser.py", line 79, in test
+    self.birank_join()
+          ^^^^^^^^^^^^^
+  File "/home/unti1/MyWork/Orders/excelINN-parser/tools/parser.py", line 56, in get_birank_comp_link
+    self.birank_fuck_off()
+    ^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+03:49:14 - logger
+[INFO] log:
+ 11 - ====== WebDriver manager ======
+03:49:14 - logger
+[INFO] log:
+ 11 - Driver [/home/unti1/.wdm/drivers/chromedriver/linux64/114.0.5735.90/chromedriver] found in cache
+22:04:29 - logger
+[INFO] log:
+ 11 - ====== WebDriver manager ======
+22:04:29 - logger
+[INFO] log:
+ 11 - Driver [/home/unti1/.wdm/drivers/chromedriver/linux64/114.0.5735.90/chromedriver] found in cache
+22:05:08 - logger
+[INFO] log:
+ 11 - ====== WebDriver manager ======
+22:05:08 - logger
+[INFO] log:
+ 11 - Driver [/home/unti1/.wdm/drivers/chromedriver/linux64/114.0.5735.90/chromedriver] found in cache
+22:05:30 - logger
+[INFO] log:
+ 11 - ====== WebDriver manager ======
+22:05:30 - logger
+[INFO] log:
+ 11 - Driver [/home/unti1/.wdm/drivers/chromedriver/linux64/114.0.5735.90/chromedriver] found in cache
+23:22:07 - logger
+[INFO] log:
+ 11 - ====== WebDriver manager ======
+23:22:07 - logger
+[INFO] log:
+ 11 - Driver [/home/unti1/.wdm/drivers/chromedriver/linux64/114.0.5735.90/chromedriver] found in cache
+23:28:27 - logger
+[INFO] log:
+ 11 - ====== WebDriver manager ======
+23:28:27 - logger
+[INFO] log:
+ 11 - Driver [/home/unti1/.wdm/drivers/chromedriver/linux64/114.0.5735.90/chromedriver] found in cache
+23:37:48 - logger
+[INFO] log:
+ 11 - ====== WebDriver manager ======
+23:37:48 - logger
+[INFO] log:
+ 11 - Driver [/home/unti1/.wdm/drivers/chromedriver/linux64/114.0.5735.90/chromedriver] found in cache
+23:44:04 - logger
+[INFO] log:
+ 11 - ====== WebDriver manager ======
+23:44:04 - logger
+[INFO] log:
+ 11 - Driver [/home/unti1/.wdm/drivers/chromedriver/linux64/114.0.5735.90/chromedriver] found in cache

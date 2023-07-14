@@ -1,0 +1,8 @@
+*.xlsx
+bin
+include
+lib
+lib64
+share
+__pychache__
+pyvenv.cfg
