@@ -1,4 +1,4 @@
-name: Build
+name: TestFile
 
 on: [push, pull_request]
 
@@ -23,11 +23,15 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         pip install pyinstaller
+        pip install selenium
+        pip install pandas
+        pip install numpy
+        pip install openpyxl
     - name: Build
       run: |
         pyinstaller --onefile test.py
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
-        name: test-app-${{ matrix.os }}-py${{ matrix.python-version }}
+        name: parser-${{ matrix.os }}-py${{ matrix.python-version }}
         path: dist/*

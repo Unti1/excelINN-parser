@@ -1,4 +1,4 @@
-name: Build
+name: MainFile
 
 on: [push, pull_request]
 
@@ -23,6 +23,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         pip install pyinstaller
+        pip install selenium
+        pip install pandas
+        pip install numpy
+        pip install openpyxl
     - name: Build
       run: |
         pyinstaller --onefile main.py

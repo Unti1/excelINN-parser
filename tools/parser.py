@@ -35,7 +35,7 @@ class Pars(Thread):
     
     def write_excel(self, df:pd.DataFrame):
         # df = df.iloc[:,[4,11]]
-        df.to_excel(self.file_path, index=False)  # Перезаписываем файл Excel
+        df.to_excel(self.file_path, index=False, startrow=6)  # Перезаписываем файл Excel
 
     def birank_fuck_off(self):
         time.sleep(0.25)
