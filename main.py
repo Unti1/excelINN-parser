@@ -12,19 +12,17 @@ class GUI:
 
     def start_parsing(self):
         file_path = filedialog.askopenfilename(filetypes=[("Excel Files", "*.xlsx")])
-        pars = Pars(file_path, False)
+        pars = Pars(file_path, True)
         pars.start()
-        
         self.update_labels(pars)
 
-    def update_labels(self, pars:Pars):
+    def update_labels(self, pars):
         self.position_value_label.config(text=str(pars.count_now))
         self.total_count_value_label.config(text=str(pars.max_count))
-        if pars.working:
-            self.root.after(100, self.update_labels, pars)  # Периодически обновляем метки каждые 100 миллисекунд
+        self.root.after(100, self.update_labels, pars)  # Периодически обновляем метки каждые 100 миллисекунд
 
     def run(self):
-        self.root = tk.Tk()
+        self.root = tk.Tk() 
 
         file_label = tk.Label(self.root, text="Укажите файл Excel:")
         file_label.pack()

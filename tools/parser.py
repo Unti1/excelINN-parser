@@ -5,7 +5,7 @@ class Pars(Thread):
     def __init__(self, filepath, invisable=False) -> None:
         Thread.__init__(self)
         self.based_browser_startUp(invisable) # обычный запуск без dolphin
-        self.wait = WebDriverWait(self.driver,6)
+        self.wait = WebDriverWait(self.driver,5)
         self.action = ActionChains(self.driver,250)
 
         self.file_path = filepath
@@ -34,7 +34,8 @@ class Pars(Thread):
         return df
     
     def write_excel(self, df:pd.DataFrame):
-        df.to_excel(self.file_path, index=False,startrow=6)  # Перезаписываем файл Excel
+        # df = df.iloc[:,[4,11]]
+        df.to_excel(self.file_path, index=False)  # Перезаписываем файл Excel
 
     def birank_fuck_off(self):
         time.sleep(0.25)
@@ -49,28 +50,42 @@ class Pars(Thread):
     def birank_join(self):
         self.driver.get("https://birank.com/ru-ru/")
         self.birank_fuck_off()
+        
     
     def get_comp_link_bitrank(self,INN):
-        self.driver.find_element(By.XPATH,'//input[@id="autocomplete"]').send_keys(INN)
-        self.action.send_keys(Keys.ENTER).perform()
-        self.wait.until(EC.element_to_be_clickable((By.XPATH,'//article[@class="articleSearch"]/a')))
-        self.driver.find_element(By.XPATH,'//article[@class="articleSearch"]/a').click()
         try:
-            links = self.driver.find_elements(By.XPATH,'//div[@class="cell-contents contact-wrapper"]//a[@class="content-link"]')
-            links = ', '.join(list(map(lambda x: x.get_attribute('href'),links)))
-            self.finding_link += 1 # НАЙДЕННЫХ ССЫЛОК
+            self.driver.find_element(By.XPATH,'//input[@id="autocomplete"]').click()
+            self.action.key_down(Keys.CONTROL).send_keys('A').perform()
+            self.action.key_up(Keys.CONTROL).perform()
+            self.action.send_keys(Keys.DELETE).perform()
+            self.driver.find_element(By.XPATH,'//input[@id="autocomplete"]').send_keys(INN)
+            self.action.send_keys(Keys.ENTER).perform()
+            try:
+                self.wait.until(EC.element_to_be_clickable((By.XPATH,'//article[@class="articleSearch"]/a')))
+                self.driver.find_element(By.XPATH,'//article[@class="articleSearch"]/a').click()
+            except:
+                links = "-"
+            
+            try:
+                links = self.driver.find_elements(By.XPATH,'//div[@class="cell-contents contact-wrapper"]//a[@class="content-link"]')
+                links = ', '.join(list(map(lambda x: x.get_attribute('href'),links)))
+                self.finding_link += 1 # НАЙДЕННЫХ ССЫЛОК
+            except:
+                links = "-"
+            return(links)
         except:
-            links = "-"
-        return(links)
+            self.driver.get("https://birank.com/ru-ru/")
+            logging.error(traceback.format_exc())
+            pass
 
     def bitrank_parsing(self,df:pd.DataFrame):
-        finally_data = df
+        self.finally_data = df
         for i in range(self.max_count):
             self.count_now += 1
-            if finally_data.iloc[i,11] != np.nan:
-                finally_data.iloc[i,11] = self.get_comp_link_bitrank(str(df.iloc[i,4]))
+            if self.finally_data.iloc[i,11] != np.nan:
+                self.finally_data.iloc[i,11] = self.get_comp_link_bitrank(str(df.iloc[i,4]))
         self.working = False
-        self.write_excel(finally_data)
+        self.write_excel(self.finally_data)
     
     
     def test(self):
@@ -89,7 +104,16 @@ class Pars(Thread):
         pass
 
     def run(self):
-        while self.working:
-            df = self.read_excel()
-            self.birank_join()
-            self.bitrank_parsing(df)
+        try: 
+            while self.working:
+                df = self.read_excel()
+                self.birank_join()
+                self.bitrank_parsing(df)
+                print("Собрано ссылок:",self.finding_link)
+        except:
+            try:
+                self.write_excel(self.finally_data)
+            except:
+                pass
+            logging.info(traceback.format_exc())
+            pass
